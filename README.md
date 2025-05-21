@@ -1,31 +1,76 @@
-# Instructions pour exécuter notre projet
 
-0. **Prérequis**
-    Veuillez utiliser un IDE(VsCode,PyCharm etc) afin de pouvoir "lire" notre projet ensuite veuillez ouvrir le Folder credit-risk-scoring et lire la suite de ce readm
+# Credit Risk Scoring
 
-1. **Installer Pip** (si vous ne l'avez pas déjà) :
-   - Ouvrez votre terminal associé à votre IDE
-   - Tapez les commandes suivantes :
-     python3 -m ensurepip --upgrade
-    
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![License](https://img.shields.io/badge/License-Apache%202.0-green)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+![Model](https://img.shields.io/badge/Model-RandomForest-orange)
 
-2. **Installer Poetry** (si vous ne l'avez pas déjà) :
-   - Toujours dans le même terminal,tapez la commande suivante :
-     pip install poetry ou bien pip3 install poetry(si vous avez fait l'étape 1)
-     
+Modélisation du risque de défaut à partir de données de crédit client.
+Ce projet a été réalisé dans le cadre du Master MoSEF à l’Université Paris 1.
 
-3. **Installer les packages référencés dans `pyproject.toml`** :
-   - Toujours dans le même terminal, exécutez la commande suivante :
-     poetry install
-    
-Il est possible qu'il y est un WARNING à la fin de cette commande, mais ce n'est pas important le projet pourra quand même être exécuter.  
+## 🎯 Objectif
+Élaborer un modèle prédictif pour estimer la probabilité de défaut d’un client à partir de données socio-financières.
 
-Vous pouvez maintenant exécuter nos notebooks à condition de n'avoir aucune fenêtre de l'IDE sur lequel vous êtes actuellemment d'ouverte. Utilisez la commande **Run All** pour exécuter tout le code à la fois, en faisant cela votre interpréteur va vous demander de choisir un environnement:
-    
-    Sélectionnez Python Environnements
-    Puis sélectionnez le kernel qui commence par projet_scoring...(Python 3.11.9)
-    Si vous ne trouvez pas le Kernel en question veuillez fermez toutes vos fenêtres de l'IDE que vous utilisez et réessayer. Le Kernel devrait maintenant apparaître.
+## 📁 Structure
+- `data/` : fichiers CSV d'entrée (non trackés par Git)
+- `models/` : modèles sauvegardés (.pkl)
+- `notebooks/` : notebooks pour la régression logistique et Random Forest
+- `src/` : scripts Python réutilisables (optionnel)
+- `assets/` : images pour le README
 
-Notre projet va ensuite s'exécuter en allant jusqu'à la dernière cellule du notebook associé et vous pourrez exécuter les 3 notebooks que nous avons
+## 🛠 Stack technique
+- Python 3.10
+- pandas, scikit-learn, matplotlib
+- imbalanced-learn, optbinning, shap
+- Jupyter, Poetry
 
-PS: Vous pouvez aussi RUN cellule par cellule en sélectionnant la cellule souhaitée et en faisant SHIFT+Entrée, il est impératif d'exécuter les cellules dans le bon ordre, sinon certaines variables ne seront pas correctement créées et vous rencontrerez des erreurs.
+## 📊 Modèles testés
+- Régression Logistique (avec et sans SMOTE)
+- Random Forest (avec tuning via GridSearchCV)
+
+## 🔍 Résultats
+- Modèle Random Forest : AUC-ROC = **0.94**
+- F1-Score défaut (classe 1) ≈ **0.73**
+- Explicabilité : **Shapley Values** utilisées pour interprétation
+
+---
+
+## 🚀 Installation et exécution
+
+### 0. Prérequis
+Utiliser un IDE comme **VSCode** ou **PyCharm**, et Python ≥ 3.10
+
+### 1. Installer pip (si ce n’est pas déjà fait) :
+```bash
+python3 -m ensurepip --upgrade
+```
+
+### 2. Installer Poetry :
+```bash
+pip install poetry
+```
+
+### 3. Installer les dépendances du projet :
+```bash
+poetry install
+```
+
+*Un message d’avertissement peut apparaître, mais n’empêche pas le bon fonctionnement du projet.*
+
+---
+
+### ▶️ Exécution des notebooks
+
+1. Lancer VSCode ou Jupyter Lab dans le dossier du projet  
+2. Ouvrir l’un des notebooks de `notebooks/`
+3. Sélectionner le kernel Python lié au projet (ex. `projet_scoring (Python 3.11.x)`)
+4. Exécuter toutes les cellules via `Run All` ou `Shift+Entrée`
+
+> ⚠️ Ne pas ouvrir plusieurs IDE/Jupyter simultanément : cela peut empêcher le bon chargement de l’environnement.
+
+---
+
+## 📄 Licence
+Projet sous licence Apache 2.0.
+
