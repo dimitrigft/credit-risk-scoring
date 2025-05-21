@@ -1,7 +1,7 @@
 # Instructions pour exécuter notre projet
 
 0. **Prérequis**
-    Veuillez utiliser un IDE(VsCode,PyCharm etc) afin de pouvoir "lire" notre projet ensuite veuillez ouvrir le Folder Projet Scoring et lire la suite de ce readm
+    Veuillez utiliser un IDE(VsCode,PyCharm etc) afin de pouvoir "lire" notre projet ensuite veuillez ouvrir le Folder credit-risk-scoring et lire la suite de ce readm
 
 1. **Installer Pip** (si vous ne l'avez pas déjà) :
    - Ouvrez votre terminal associé à votre IDE
