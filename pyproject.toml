@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "Projet Scoring"
+version = "0"
+description = ""
+authors = ["Bethuel ASSE - Gaétan DUMAS - Dimitri GUIFT - Pierre LIBERGE"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "1.5.3"
+numpy = "1.23.5"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+statsmodels = "^0.14.4"
+missingno = "^0.5.2"
+scikit-learn = "^1.5.2"
+scipy = "^1.14.1"
+imblearn = "^0.0"
+joblib = "^1.4.2"
+optbinning = "^0.19.0"
+jupyter = "^1.1.1"
+shap = "^0.46.0"
+jupytext = "^1.16.4"
+faker = "^30.8.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
